@@ -1,16 +1,16 @@
 /*
-Theme Name: KGTV
-Theme URI: http://kgtv.com.ua
+Theme Name: CHTV
+Theme URI: http://chtv.com.ua
 Author: the Jaroslav Khorishchenko
 Author URI: http://vk.com/snipter
-Description: Тема для сайту Кременчуцького громадського телебачення
+Description: Тема для сайту Чернігівського громадського телебачення
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: КГТВ, KGTV
-Text Domain: kgtv
+Tags: ЧГТВ, CHTV
+Text Domain: chtv
 
-Тема сайта Кременчуцького Громадського ТБ
+Тема сайта Чернігівського Громадського ТБ
 */
 
 body, html{
@@ -121,30 +121,54 @@ img {
 	margin-left: 17px;
 }
 
-.header .inform .weather.sunny{
+/*Look for yahoo weather api codes https://developer.yahoo.com/weather/documentation.html*/
+/*sunny*/
+.header .inform .weather.weather-code-32{
 	background-position: 0px -200px;
 }
 
-.header .inform .weather.mostly-cloudy{
+/*mostly cloudy*/
+.header .inform .weather.weather-code-27,
+.header .inform .weather.weather-code-28,
+.header .inform .weather.weather-code-29,
+.header .inform .weather.weather-code-30 {
 	background-position: 0px -232px;
 }
 
-.header .inform .weather.cloudy{
+/*cloudy*/
+.header .inform .weather.weather-code-26{
 	background-position: 0px -264px;
 }
 
-.header .inform .weather.shower{
+/*shower*/
+.header .inform .weather.weather-code-11{
 	background-position: 0px -296px;
 }
 
-.header .inform .weather.raining{
+/*raining*/
+.header .inform .weather.weather-code-12{
 	background-position: 0px -328px;
 }
 
-.header .inform .weather.thunderstorms{
+/*thunderstorms*/
+.header .inform .weather.weather-code-37,
+.header .inform .weather.weather-code-38,
+.header .inform .weather.weather-code-39,
+.header .inform .weather.weather-code-40,
+.header .inform .weather.weather-code-45{
 	background-position: 0px -360px;
 }
 
+/*foggy*/
+.header .inform .weather.weather-code-20{
+    background-position: 0px -392px;
+}
+
+/*snow*/
+.header .inform .weather.weather-code-16,
+.header .inform .weather.weather-code-15{
+    background-position: 0px -424px;
+}
 
 .header .inform .rate{
 	text-align: center;
@@ -1401,7 +1425,7 @@ img {
 .sidebar-btn-open-holder{
 	width: 38px;
 	height: 100%;
-	background-color: none;
+	background-color: transparent;
 	position: fixed;
 	left: 50%;
 	margin-left: -549px;
@@ -1414,7 +1438,7 @@ img {
 	left: 0;
 	width: 38px;
 	height: 100%;
-	background: #252323 url(img/btn-menu-open.png) no-repeat 50% 50%;1
+	background: #252323 url(img/btn-menu-open.png) no-repeat 50% 50%;
 }
 
 /*================= Sidebar =================*/
@@ -1516,7 +1540,7 @@ img {
 .sidebar .search-form input.text:focus{
 	outline: none;
 	color: white;
-};
+}
 
 .sidebar .search-form input.text:focus::-webkit-input-placeholder  {color:transparent;}
 .sidebar .search-form input.text:focus::-moz-placeholder   {color:transparent;}

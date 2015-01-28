@@ -31,17 +31,17 @@
 		<ul class="pay-list">
 			<li>
 				<a href="#" data-tabitem="privatbank">
-					<img src="http://img.kgtv.com.ua/str/d37c5125-de63-451c-b5db-e7ec2345c4e1.png" alt="privatbank">
+					<img src="<?php bloginfo('template_directory'); ?>/img/privatbank.png" alt="privatbank">
 				</a>
 			</li>
 			<li>
 				<a href="#"  data-tabitem="paypal">
-					<img src="http://img.kgtv.com.ua/str/5ff7aa35-c63e-4c1b-90bc-9c0431e97d7f.png" alt="paypal">
+					<img src="<?php bloginfo('template_directory'); ?>/img/paypal.png" alt="paypal">
 				</a>
 			</li>
 			<li>
 				<a href="#"  data-tabitem="bank24">
-					<img src="http://img.kgtv.com.ua/str/45fdffe9-a03f-4cd9-bcc2-054ce80e89ac.png" alt="bank24">
+					<img src="<?php bloginfo('template_directory'); ?>/img/bank24.png" alt="bank24">
 				</a>
 			</li>
 		</ul>
@@ -61,7 +61,7 @@
 
 					$merchantID = "105334";
 					$pass = "2T4628KfWB7Er7fJJaNIDee9Tk7Vb7G7";
-					$details = "Добровільна пожертва на здійснення статутної діяльності ГО КГТБ";
+					$details = "Добровільна пожертва на здійснення статутної діяльності ГО ЧГТБ";
 					$order = randString();
 					$extDetails = "1000BDN01";
 					$returnURL = "http://kgtv.com.ua/dyakuyemo/";
@@ -99,7 +99,7 @@
 			<div class="donation-box" style="width: 565px;">
 				<h2>Банк 24</h2>
 				<p><iframe width="560" height="315" src="//www.youtube.com/embed/tnt7tmKHFuw" frameborder="0" allowfullscreen></iframe></p>
-				<p style="text-align: left">Відтепер в усіх платіжних терміналах Кременчука, розташованих у магазинах «Оптовичок» і «Маркет-Опт», в розділі «Інтернет і телебачення», є кнопка «Кременчуцьке Громадське ТБ». Два-три натискання – і ваша посильна допомога – на рахунку Кременчуцького Громадського.</p>
+				<p style="text-align: left">Відтепер в усіх платіжних терміналах Чернігова, розташованих у магазинах «Оптовичок» і «Маркет-Опт», в розділі «Інтернет і телебачення», є кнопка «Чернігівське Громадське ТБ». Два-три натискання – і ваша посильна допомога – на рахунку Чернігівського Громадського.</p>
 				<h2>Карта терміналів</h2>
 			</div>
 			<div id="map-container" style="width: 100%; height: 100%"></div>

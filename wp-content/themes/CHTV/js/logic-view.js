@@ -223,3 +223,18 @@ function setCookie(cname, cvalue, exdays) {
     document.cookie = cname + "=" + cvalue + "; " + expires;
 }
 
+//weather widget
+$(document).ready(function() {
+    $.simpleWeather({
+        location: 'chernihiv, ukraine',
+        unit: 'c',
+        success: function(weather) {
+            html = '<span class="weather num weather-code-'+weather.code+'"> '+weather.temp+' &deg;</span>';
+            html += '<span class="status">Чернігів</span>';
+            $("#weather").html(html);
+        },
+        error: function(error) {
+            $("#weather").html('<p>'+error+'</p>');
+        }
+    });
+});

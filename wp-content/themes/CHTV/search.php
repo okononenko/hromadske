@@ -72,7 +72,7 @@
 					$nextPostsURL = isset($nextPosts[1]) ? $nextPosts[1] : "";
 					$prevPosts = explode('"',get_previous_posts_link());
 					$prevPostsURL = isset($prevPosts[1]) ? $prevPosts[1] : ""; 
-					//TODO: Notice: Undefined offset: 1 in /var/www/jaroslav/data/www/test.kgtv.com.ua/wp-content/themes/KGTV/category.php on line 46
+					//TODO: Notice: Undefined offset: 1 in /var/www/jaroslav/data/www/test.kgtv.com.ua/wp-content/themes/CHTV/category.php on line 46
 				?>
 				<a href="<?php echo $prevPostsURL; ?>" class="prev"></a>
 				<a href="<?php echo $nextPostsURL; ?>" class="next"></a>

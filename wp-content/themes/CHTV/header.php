@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<?php
-		$siteName = "Кременчуцьке Громадське ТБ";
+		$siteName = "Чернігівське Громадське ТБ";
 		$title = $siteName;
 		if(is_home()) $title = $title;
 		if(is_single()) $title = $post -> post_title . " | " . $title;
@@ -30,29 +30,31 @@
 	<?php
 		$keywords = array(
 			"громадське тб",
-			"кременчуцьке громадське тб",
-			"кременчуг видео",
-			"кременчуг громадське тб",
-			"кременчуг телеканал",
-			"кременчуг",
-			"новости кременчуга",
-			"кременчук погода",
+			"чернігівське громадське тб",
+			"чернігів видео",
+			"чернігів громадське тб",
+			"чернігів телеканал",
+			"чернігів",
+            "чернигов",
+			"новости чернигова",
+			"чернігів погода",
 			"фографии",
 			"фото",
-			"фотографії кременчука",
-			"кременчуцькі новини",
-			"кременчуг курс доллара",
+			"фотографії черніговаа",
+			"чернігівські новини",
+			"чернігів курс доллара",
 			"новини",
 			"політика",
 			"події",
 			"спорт",
-			"город кременчуг украина",
-			"kremenchug"
+			"город чернигов украина",
+			"chernigov",
+            "chernihiv"
 		);
 		$metaKeywords = arrToCommaSepStr($keywords);
-		$metaTitle = "Кременчуцьке Громадське ТБ";
-		$metaDescription = "Кременчуцьке Громадське ТБ - спільна ініциатива кременчуцьких журналістів. Новини міста, прямі ефіри та найсвіжіше відео з місця подій.";
-		$metaImgURL =  get_template_directory_uri() . "/img/kgtv-logo-big.png";
+		$metaTitle = "Чернігівське Громадське ТБ";
+		$metaDescription = "Чернігівське Громадське ТБ - спільна ініциатива чернігівських журналістів. Новини міста, прямі ефіри та найсвіжіше відео з місця подій.";
+		$metaImgURL =  get_template_directory_uri() . "/img/chtv-logo-big.png";
 		$metaURL = $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
 		if(is_single()){
 			$metaTitle = $title;
@@ -65,10 +67,10 @@
 
 	<meta name="robots" content="index, follow">
     <meta name="keywords" content="<?php echo $metaKeywords; ?>">
-    <meta name="author" content="Кременчуцьке Громадське ТБ">
+    <meta name="author" content="Чернігівське Громадське ТБ">
     <meta name="document-state" content="state">
     <meta name="revisit-after" content="1 days">
-    <meta name="copyright" content="Кременчуцьке Громадське ТБ">
+    <meta name="copyright" content="Чернігівське Громадське ТБ">
     <meta name="classifications" content="">
     <meta name="other.language" content="ukrainian">
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -101,6 +103,7 @@
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 	<script src="<?php bloginfo('template_directory'); ?>/js/logic-view.js"></script>
+	<script src="<?php bloginfo('template_directory'); ?>/js/jquery.simpleWeather.js"></script>
 	<!-- /Scripts -->
 </head>
 <body>
@@ -246,17 +249,8 @@
 					<a href="<?php echo home_url(); ?>"></a>
 				</div>
 				<div class="inform">
-					<div>
-						<?php 
-							$w = getWeather();
-							$temperatureVal = floatval($w -> t);
-							if($temperatureVal > 0) $temperature = "+".number_format($temperatureVal, 0);
-							else $temperature = number_format($temperatureVal, 0);
-							$weatherState = $w -> desc;
-						?>
-						<span class="weather num <?php echo $weatherState ?>"><?php echo $temperature ?> °</span>
-						<span class="status">Кременчук</span>
-					</div>
+                    <!--weather widget, look logic-view.js on string 226-->
+                    <div id="weather"></div>
 					<div>
 						<span class="rate num"><?php echo getCurrency(); ?></span>
 						<span class="status">USD</span>
